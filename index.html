@@ -1,1 +1,35 @@
+html
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Сейф с 6‑значным паролем</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+<div class="container">
+    <div class="safe" id="safe">
+        <div class="dial"></div>
+        <div class="door"></div>
+    </div>
+
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <h2>Введите 6‑значный пароль</h2>
+            <input type="password" id="pin" maxlength="6" pattern="\d{6}" autofocus>
+            <button id="unlockBtn">Открыть</button>
+            <p class="error" id="errorMsg"></p>
+        </div>
+    </div>
+
+    <div class="payload" id="payload">
+        <h3>Секретное содержимое</h3>
+        <p>Здесь может быть любой ваш текст, ссылка, изображение, файл‑ссылка и т.д.</p>
+        <p>Пример: <a href="https://example.com/secret.pdf" target="_blank">скачать секретный документ</a></p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
